@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+
 import './App.css';
+// import { useRef } from 'react';
+// import jsPDF from 'jspdf';
+import Dashboard from './Dashboard';
 
 function App() {
+  // const reportTemplateRef = useRef(null);
+
+  // const handleGeneratePdf = () => {
+  //   const doc = new jsPDF({
+  //     format: 'a4',
+  //     unit: 'px',
+  //   });
+
+  //   doc.setFont('Inter-Regular', 'normal');
+  //   doc.html(reportTemplateRef.current, {
+  //       async callback(doc) {
+  //       await doc.save('mortgage.pdf');
+  //     },
+  //   });
+  // }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <button className='button' onClick={handleGeneratePdf}>
+        Generate PDF
+      </button> */}
+      {/* <div ref={reportTemplateRef}> */}
+        <Dashboard />
+      {/* </div> */}
     </div>
   );
 }
