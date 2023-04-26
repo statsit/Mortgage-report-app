@@ -35,6 +35,17 @@ import { resultFormatter, resultLongFormatter } from './utils';
 
 export const mortgageRepayment = [
     {
+		created : "2023-03-31",
+		principal : resultLongFormatter(48311859.14),
+		interest : resultLongFormatter(603898.24),
+		principal_interest : resultLongFormatter(48915757.38),
+		balance : resultLongFormatter(47846257.38),
+		monthly_replayment : resultLongFormatter(1069500.0),
+        monthly_replayment_aus : resultFormatter(2300, 'AUD'),
+		status: 'paid',
+       deltaType: 'increase',
+	},
+    {
 		created : "2023-02-26",
 		principal : resultLongFormatter(48771712.73),
 		interest : resultLongFormatter(609646.41),

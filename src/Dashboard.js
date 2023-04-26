@@ -29,7 +29,7 @@ const Dashboard = () => {
     const [dateRange, setDateRange] = useState([new Date(), new Date()]);
     const today = new Date();
     const principal = 54500000;
-    const balance = 48311859.14;
+    const balance = 47846257.38;
     const principalAUD = nairaToDollar(principal);
     const balanceAUD = nairaToDollar(balance);
 
