@@ -29,7 +29,7 @@ const Dashboard = () => {
     const [dateRange, setDateRange] = useState([new Date(), new Date()]);
     const today = new Date();
     const principal = 54500000;
-    const balance = 47846257.38;
+    const balance = 45866543.21;
     const principalAUD = nairaToDollar(principal);
     const balanceAUD = nairaToDollar(balance);
 
@@ -38,8 +38,8 @@ const Dashboard = () => {
     const  paid = totalPaymentMade(principal, balance);
     const paidAUD = nairaToDollar(paid);
     const percent = percentTotalPaid(principal, balance);
-    const monthlyPayment = 2300;
-    const monthlyPaymentNaira = 2300 * EXCHANGE;
+    const monthlyPayment = 3300.00;
+    const monthlyPaymentNaira = monthlyPayment * EXCHANGE;
 
     const data=[
         { label: "Paid", value: principal-balance},
