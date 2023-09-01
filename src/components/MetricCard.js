@@ -4,11 +4,10 @@ import {
     Card, 
     Metric, 
     Text, 
-    Footer, 
     Flex, 
     ProgressBar, 
-    Block, 
     DonutChart, 
+    Divider,
     Button, 
     Badge, 
     Bold,
@@ -16,86 +15,82 @@ import {
     Icon,
 } from "@tremor/react";
 
-import { InformationCircleIcon } from '@heroicons/react/outline';
+import { InformationCircleIcon } from "@heroicons/react/20/solid";
 
 
 const BalanceCard = ({title, balance, paid, total, percent}) => {
     return (
-        <Card maxWidth="max-w-sm">
-            <Flex justifyContent="justify-between" alignItems="items-center">
-            <Text><Bold>Principal Balance ({title})</Bold></Text>
-            <Badge text="@ 15%"  size='md'/>
+        <Card maxWidth="max-w-sm" decoration="top" decorationColor="teal">
+            <Flex alignItems="start">
+                <Text><Bold>Principal Balance ({title})</Bold></Text>
+                <Badge color="teal" size='md'>@ 15% </Badge>
             </Flex>
             <Metric>{balance}</Metric>
-            <Footer height="h-16">
-                <Block>
+            <Divider />
+            <div>
+                <div>
                 <Flex>
                     <Text><Bold>{paid} ({percent}%)</Bold></Text>
                     <Text><Bold>{total}</Bold></Text>
                 </Flex>
-                <ProgressBar percentageValue={percent} color="teal" marginTop="mt-4" />
-                </Block>
-            </Footer>
+                <ProgressBar value={percent} color="teal" marginTop="mt-4" />
+                </div>
+            </div>
         
         </Card>
+        
 )};
 
-const MonthlyCard = ({monthly, monthly_aus}) => {
+const MonthlyCard = ({monthly, monthly_aus, exchange_rate}) => {
     const text = `${monthly_aus}`;
+    const exchange = `@${exchange_rate} Naira` ;
     return (
-        <Card maxWidth="max-w-sm">
-            <Flex justifyContent="justify-between" alignItems="items-center">
+        <Card maxWidth="max-w-sm" decoration="top" decorationColor="teal">
+            <Flex alignItems="start">
             <Text><Bold>Monthly Repayment</Bold></Text>
-            <Badge text="@ 465 Naira"  size='md'/>
+            <Badge color="teal" size='md'>{exchange}</Badge>
             </Flex>
             <Metric>{monthly}</Metric>
-            <Footer height="h-16">
-                <Flex justifyContent="justify-end" alignItems="items-end">
-                    <Block>
+            <Divider />
+            <div>
+                <Flex justifyContent="end" alignItems="end">
+                    <div align="right">
                     <Text><Bold>Amount Transferred</Bold></Text>
-                    </Block>
-                    <Button text={text} size="sx" importance="secondary" />
+                    <Button color="teal" size="md" variant="secondary"><Bold>{text}</Bold></Button>
+                    </div>
+                   
                 </Flex>
                 
-            </Footer>
+            </div>
         </Card>
 )};
-
-// let remaining = 48771712.73
-// const data=[
-//     { label: "Paid", value: 54500000.00-remaining},
-//     { label: "Balance", value: remaining},
-// ];
-
-// const valueFormatter = (number) => (
-//     `N ${Intl.NumberFormat().format(number).toString()}`
-// );
 
 const TrackCard = ({data, valueFormatter}) => {
     return (
         <Card>
          <div className="md:flex justify-between">
-            <Block>
-                <Flex justifyContent="justify-start" spaceX="space-x-0.5" alignItems="items-center">
+            <div>
+                <Flex justifyContent="start" spaceX="space-x-0.5" alignItems="center">
                     <Title> Payment Tracker </Title>
                     <Icon
                         icon={ InformationCircleIcon }
+                        color="teal"
                         variant="simple"
                         tooltip="Green represents the amount paid, while Grey represents the amount remaining"
                     />
                 </Flex>
                 <Text> Green represents the amount paid, while Grey represents the amount remaining </Text>
-            </Block>
+            </div>
          </div>
          <DonutChart
             data={data}
             category="value"
-            dataKey="label"
-            colors={["teal", "gray"]}
+            index="label"
+            colors={["teal", "slate"]}
             valueFormatter={valueFormatter}
             showLabel={true}
             showAnimation={true}
-            height="h-80"
+            // height="h-80"
             marginTop="mt-10"
         /> 
         </Card>
