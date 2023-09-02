@@ -7,10 +7,18 @@ This is a simple mortgage repayment Dashboard that allows you to visualise the m
 ### Desktop View
 ![App Screenshot](images/Desktop.png)
 
+### Desktop View
+![App Screenshot](images/desktopd.png)
+
 ### Mobile View
 ![App Screenshot](images/mobile1.png)
 
 ![App Screenshot](images/mobile2.png)
+
+### Mobile Night View
+![App Screenshot](images/mobiled1.png)
+
+![App Screenshot](images/mobled2.png)
 
 
 ## Installation
@@ -59,3 +67,15 @@ I'm a full stack AI developer...
 
 ## 🛠 Skills
 AI, ML, DE,  Python, Javascript, ReactJS, HTML, CSS...
+
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://codestreet.ai/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adebayo-akinlalu-5451a129/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/Akinlalu)
+
+
+ 
+
+
+
